@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/orderIdTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Order ID"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:id="@+id/amountTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Amount"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <!--
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="0.05"
+                    />
+
+                <TextView
+                    android:id="@+id/TotalAmountTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="Old Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+        -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:id="@+id/recievingTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Recieving"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <!-- <View
+             android:layout_width="0dp"
+             android:layout_height="2dp"
+             android:layout_weight="0.05"/>
+
+         <TextView
+             android:id="@+id/notesTxt"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.2"
+             android:text="Notes"
+             android:textStyle="bold"
+             android:textColor="@color/colorPrimaryDark"/>-->
+
+    </TableRow>
+</LinearLayout>

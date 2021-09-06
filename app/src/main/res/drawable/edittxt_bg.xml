@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Used in Home/Dashboard Page -->
+
+    <solid android:color="#FFF" />   <!-- White = #fff -->
+    <stroke
+        android:width="2px"
+        android:color="#cfd3d4" />
+
+
+    <gradient
+        android:angle="270"
+        android:endColor="#f3f5f4"
+        android:startColor="#f4f6f5" />
+
+    <padding
+        android:bottom="5dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp" />
+
+
+</shape>

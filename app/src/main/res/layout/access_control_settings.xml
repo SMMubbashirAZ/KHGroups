@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="ACCESS CONTROL"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+
+    <ScrollView
+        android:id="@+id/PageScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TableRow
+                android:id="@+id/RouteTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Route"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/RouteCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/RouteCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/ReportTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RouteTbl"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewRep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Reporting"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/ReportCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/ReportCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+            <!--
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:id="@+id/TimeTbl"
+                            android:layout_below="@+id/RouteTbl">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Timing"
+                                android:id="@+id/textViewT"
+                                android:layout_weight="1"/>
+
+                            <CheckBox
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/TimeCheck"
+                                android:layout_weight="1"
+                                android:checked="false" />
+
+                        </TableRow>
+            -->
+
+            <TableRow
+                android:id="@+id/InvTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ReportTbl"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Inventory"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/InventoryCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+
+                        android:checked="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/InventoryCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/CustTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/InvTbl"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Customer List"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/CustomerCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/CustomerCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/POTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CustTbl"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Place Order"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/PlaceOrderCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/PlaceOrderCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SummaryTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/POTbl"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Summary"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/SummaryCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/SummaryCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SyncTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SummaryTbl"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Synchronizaton"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/SyncCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/SyncCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <!--   </RelativeLayout>
+
+           </ScrollView>
+       -->
+
+
+            <TableRow
+                android:id="@+id/ProcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SyncTbl"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/SaveSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="SAVE SETTINGS" />
+
+            </TableRow>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verifyStock_Linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="10dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:clickable="false"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        android:padding="2dp"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:focusable="false"
+            android:freezesText="true"
+            android:text="id"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:focusable="false"
+            android:freezesText="true"
+            android:text="Brand Name"
+            android:textSize="24sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/third"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:clickable="false"
+            android:focusable="false"
+            android:freezesText="true"
+            android:gravity="center_horizontal"
+            android:text="Date-Time"
+            android:textSize="24sp" />
+
+        <!-- Umais added below txtView-->
+
+    </TableRow>
+
+
+</LinearLayout>

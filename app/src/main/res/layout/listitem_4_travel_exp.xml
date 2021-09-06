@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="DATETIME"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.03" />
+
+
+        <TextView
+            android:id="@+id/fromTownTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.23"
+            android:text="TOWN 1"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.03" />
+
+
+        <TextView
+            android:id="@+id/toTownTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.23"
+            android:text="Town 2"
+            android:textColor="@color/black" />
+
+        <!-- <View
+             android:layout_width="0dp"
+             android:layout_height="2dp"
+             android:layout_weight="0.05"
+             />
+
+
+         <TextView
+             android:id="@+id/daysTV"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.15"
+             android:text="Days"
+             android:textStyle="bold"
+             android:textColor="@color/colorPrimaryDark"/>
+ -->
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.03" />
+
+        <TextView
+            android:id="@+id/amountTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Amount"
+            android:textColor="@color/black" />
+
+    </TableRow>
+</LinearLayout>

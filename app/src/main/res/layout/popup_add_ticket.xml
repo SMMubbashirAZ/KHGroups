@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/titleEdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:digits="@string/allow_characters"
+            android:hint="Title"
+            android:inputType="text"
+            android:padding="15dp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/messageEdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:digits="@string/allow_characters"
+            android:hint="Message"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="150"
+            android:maxLines="6"
+            android:minLines="4"
+            android:padding="15dp"
+            android:scrollHorizontally="false" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/SubmitBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="SUBMIT"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/CancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="CANCEL"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+
+    </TableRow>
+</LinearLayout>

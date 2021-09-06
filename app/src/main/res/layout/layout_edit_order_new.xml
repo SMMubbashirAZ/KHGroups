@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/EditLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/ItemID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ItemTotal2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/ItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.30"
+            android:paddingStart="5dp"
+            android:text="name " />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:id="@+id/OldQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.15"
+            android:text="Old Qty" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.074" />
+
+        <EditText
+            android:id="@+id/QtyTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="-15dp"
+            android:layout_weight="0.19"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890."
+            android:hint="Qty"
+            android:imeOptions="actionDone"
+            android:inputType="number|numberDecimal"
+            android:maxLength="5"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/QtyTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.17"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.03" />
+
+        <!--<Spinner
+            android:id="@+id/discountDrop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="@drawable/edittxt_bg"
+            android:visibility="gone"
+            />-->
+        <EditText
+            android:id="@+id/discountTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.17"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890."
+            android:hint="Dis"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+
+            android:maxLines="1"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/discountTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/tradeOfferEdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890."
+            android:hint="T.O"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tradeOfferTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.15"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.025" />
+
+        <ImageButton
+            android:id="@+id/itemDetailsTxtView"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+
+            android:layout_weight="0"
+
+            android:background="@mipmap/details" />
+
+
+    </TableRow>
+    <!--<TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/ItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:text="name" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:id="@+id/OldQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="Old Qty" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+        <EditText
+            android:id="@+id/QtyTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890."
+            android:hint="Qty"
+            android:imeOptions="actionDone"
+            android:inputType="number|numberDecimal"
+            android:maxLength="5"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/QtyTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+        &lt;!&ndash;<Spinner
+            android:id="@+id/discountDrop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="@drawable/edittxt_bg"
+            android:visibility="gone"
+            />&ndash;&gt;
+        <EditText
+            android:id="@+id/discountTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890"
+            android:hint="Dis"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1" />
+
+
+        <TextView
+            android:id="@+id/discountTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/tradeOfferEdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:background="@android:drawable/edit_text"
+            android:digits="1234567890"
+            android:hint="T.O"
+            android:imeOptions="actionDone"
+            android:visibility="gone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1" />
+
+
+        <TextView
+            android:id="@+id/tradeOfferTxtView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+        <TextView
+            android:id="@+id/itemDetailsTxtView"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.15"
+            android:background="@drawable/details" />
+
+
+    </TableRow>-->
+
+    <Button
+        android:id="@+id/DeleteOrder"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="Delete"
+        android:visibility="gone" />
+
+    <!--
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/list_divider"
+            android:layout_margin="10dp"/>
+    -->
+
+
+</LinearLayout>

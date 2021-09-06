@@ -1,0 +1,223 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+    <!-- Sales order LAYOUT STARTS  -->
+
+    <TableLayout
+        android:id="@+id/SalesOrderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5e9e8"
+            android:padding="10dp"
+            android:weightSum="1"
+
+            >
+
+            <TextView
+                android:id="@+id/TotPriceTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="left"
+                android:text="Total Cost :\n0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                />
+
+
+            <TextView
+                android:id="@+id/TotQtyTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="right"
+                android:text="Total Quantity :\n0"
+
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                />
+
+
+        </TableRow>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#cfd3d4" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:padding="20dp"
+            android:weightSum="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/SelectCustomer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70"
+                android:background="@android:drawable/edit_text"
+                android:hint="Customer Name" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.20" />
+
+            <Button
+                android:id="@+id/AddMoreBtn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.10"
+                android:background="@drawable/add" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/material_blue_grey_800" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/DynamicLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="15dp">
+
+                    <EditText
+                        android:id="@+id/NotesTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="Notes"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:maxLength="150"
+                        android:minLines="3"
+
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="15dp">
+
+                    <Button
+                        android:id="@+id/SubmitBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="PLACE ORDER"
+
+                        />
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </TableLayout>
+
+
+    <!-- Sales Order List STARTS -->
+
+
+    <LinearLayout
+        android:id="@+id/SOListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="-15dp"
+            android:background="#f1f1f1" />
+
+        <!--     <ListView
+                 android:id="@+id/OrderHeaderList"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:visibility="visible"/>
+             <View
+                 android:layout_width="fill_parent"
+                 android:layout_height="2dp"
+                 android:background="@color/list_divider"
+                 />
+             <ListView
+                 android:id="@+id/OrderList"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:visibility="visible"/>-->
+
+        <!--
+                <com.fortysevendeg.swipelistview.SwipeListView
+                    android:id="@+id/OrderList"
+                    android:listSelector="#00000000"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    swipe:swipeFrontView="@+id/front"
+                    swipe:swipeBackView="@+id/back"
+                    swipe:swipeDrawableChecked="@drawable/choice_selected"
+                    swipe:swipeDrawableUnchecked="@drawable/choice_unselected"
+                    swipe:swipeCloseAllItemsWhenMoveList="true"
+                    swipe:swipeMode="left"
+                    />
+        -->
+
+        <com.likebamboo.widget.SwipeListView
+            android:id="@+id/OrderList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

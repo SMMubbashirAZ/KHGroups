@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/my_doctor_recylar_first_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:elevation="10dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/route_shop_view_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_view_icon_2"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_blue_back"/>
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/route_shop_place_order_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_crt"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_blue_back" />
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/route_shop_return_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:src="@drawable/ic_resource_return"
+                android:paddingTop="9dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingBottom="5dp"
+                app:tint="@color/white"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_blue_back" />
+
+            <ImageView
+                android:id="@+id/route_shop_visit_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_shp_vst"
+                android:padding="12dp"
+                app:tint="@color/white"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_blue_back"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/my_route_cv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_doctor_recylar_first_ll"
+            android:layout_marginTop="-20dp"
+            app:cardBackgroundColor="@color/white"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/parentLayout"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/route_shop_name_tv"
+                        android:textColor="#00B0F0"
+
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="1"
+                        android:text="A.H Huzer"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/route_person_name_tv"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="General Practitioner (GP)"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+
+                        >
+                        <ImageView
+                            android:layout_width= "10dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_loc"
+                            android:layout_marginTop="3dp"
+                            android:scaleType="fitXY"/>
+
+                        <TextView
+                            android:id="@+id/route_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ShopName"
+                            android:layout_marginStart="2dp"
+                            android:textSize="15sp"  />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

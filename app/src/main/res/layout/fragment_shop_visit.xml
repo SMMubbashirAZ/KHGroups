@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AboutFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/shopVisitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--<TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:background="#33b5e5">
+
+            <TextView
+                android:id="@+id/aboutTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHOP VISIT"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="5dp"
+                android:textColor="#FFF"
+                android:textSize="15sp"/>
+        </TableRow>-->
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hello"
+            android:textSize="15sp" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/SelectShop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Shop Name"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="20"
+                android:padding="15dp" />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edit_text_focus"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:paddingLeft="14dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.45"
+                android:gravity="center"
+                android:text="Upload Image"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.05" />
+
+            <ImageView
+                android:id="@+id/frontImagePic"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.40"
+                android:src="@mipmap/no_img" />
+
+            <ImageView
+                android:id="@+id/takeFrontImagePic"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="0.10"
+                android:src="@drawable/ic_camera" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/locStatusTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/edittxt_bg"
+                android:gravity="center"
+                android:text="Location Status:"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1">
+
+
+            <Spinner
+                android:id="@+id/noReasonDrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Search Area"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingLeft="5dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <EditText
+                android:id="@+id/NotesTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/edit_text"
+                android:digits="@string/allow_characters"
+                android:hint="Remarks"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLength="150"
+                android:maxLines="5"
+                android:minLines="3"
+                android:padding="15dp"
+                android:scrollHorizontally="false"
+
+
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/SubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:text="SUBMIT"
+
+                />
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/showShopVisit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/NoItemTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Sorry No Items Available"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/Hlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa"
+            android:scrollbars="none" />
+
+
+        <ListView
+            android:id="@+id/listviewRList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+</LinearLayout>

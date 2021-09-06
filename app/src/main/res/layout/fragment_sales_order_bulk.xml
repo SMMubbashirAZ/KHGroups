@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RouteFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--<TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="SALES ORDER"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </TableRow>-->
+
+    <Switch
+
+        android:id="@+id/route_switcher"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:buttonTint="@color/colorAccent"
+        android:enabled="true"
+        android:padding="5dp"
+        android:switchPadding="5dp"
+        android:text="Non routes"
+        android:textColor="@android:color/black"
+        android:textOff="Disable"
+        android:textOn="Enable"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/brands_filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:text="Select Brand" />
+
+        <Spinner
+            android:id="@+id/brand_type_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/black" />
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="145dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_margin="14dp"
+            android:text="Search"></Button>
+    </LinearLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e5e9e8"
+        android:padding="10dp"
+        android:weightSum="1"
+
+        >
+
+        <TextView
+            android:id="@+id/TotPriceTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="left"
+            android:text="Total Cost :\n0"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            />
+
+
+        <TextView
+            android:id="@+id/TotQtyTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:text="Total Quantity :\n0"
+
+            android:textAppearance="?android:attr/textAppearanceSmall"
+
+            />
+
+
+    </TableRow>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#cfd3d4" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <AutoCompleteTextView
+            android:id="@+id/SelectCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:hint="Customer Name"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLines="20" />
+
+        <!--<com.toptoche.searchablespinnerlibrary.SearchableSpinner-->
+        <!--android:id="@+id/SelectCustomer"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0.70"-->
+        <!--android:background="@android:drawable/edit_text"-->
+        <!--/>-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.20" />
+
+        <Button
+            android:id="@+id/AddMoreBtn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.10"
+            android:background="@drawable/add"
+            tools:visibility="gone" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <AutoCompleteTextView
+            android:id="@+id/SelectBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70"
+            android:background="@android:drawable/edit_text"
+            android:hint="Brand Name"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLines="20" />
+
+        <!--<com.toptoche.searchablespinnerlibrary.SearchableSpinner-->
+        <!--android:id="@+id/SelectCustomer"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0.70"-->
+        <!--android:background="@android:drawable/edit_text"-->
+        <!--/>-->
+
+
+    </TableRow>
+    <TextView
+        android:id="@+id/locStatusTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="Location Status:"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/material_blue_grey_800" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Hello"
+        android:textSize="15sp" />
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/orderChildLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/progressBarSalesOrder"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/DynamicLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <Spinner
+                android:id="@+id/reasonDrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <EditText
+                    android:id="@+id/NotesTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:digits="@string/allow_characters"
+                    android:hint="Remarks"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
+                    android:minLines="3"
+                    android:scrollHorizontally="false"
+
+
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="#e5e9e8"
+                android:padding="10dp"
+                android:weightSum="4"
+
+                >
+
+                <Spinner
+                    android:id="@+id/bulkDiscountDrop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2" />
+
+                <TextView
+                    android:id="@+id/discountTxtView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Invoice Discount"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/discountTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="0.00"
+
+                    />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e5e9e8"
+                android:padding="10dp"
+                android:weightSum="4"
+
+                >
+
+                <Spinner
+                    android:id="@+id/saleTypeDrop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@android:drawable/btn_dropdown" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="Old Receivable"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/openingBalTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="0.00"
+
+
+                    />
+
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/SchemeOffer"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Scheme Offer"
+
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/SubmitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="PLACE ORDER"
+
+                    />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <TableRow
+            android:id="@+id/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccc"
+            android:padding="1dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/TotalQtyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:lines="2"
+                android:text="Total Quantity"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/TotalSalesTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:lines="2"
+                android:padding="0dp"
+                android:text="Total Amount Billed"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Header"
+            android:background="#ccc"
+            android:padding="1dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/TotalQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:lines="2"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="15sp"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/TotalSales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:lines="2"
+                android:padding="0dp"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+        </TableRow>
+
+    </RelativeLayout>-->
+
+</LinearLayout>

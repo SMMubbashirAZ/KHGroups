@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/CustomSwipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/item_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/OrderID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_left_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#000000" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/DateTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="Date" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:id="@+id/CustomerNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.45"
+                android:text="Customer Name" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.05" />
+
+            <!--
+
+                        <TextView
+                            android:id="@+id/TotalAmountTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.10"
+                            android:text="1000"/>
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.05"/>
+
+            -->
+
+            <TextView
+                android:id="@+id/TotalNewAmountTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:text="1000" />
+
+
+        </TableRow>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:padding="12dp">
+
+
+        <ImageButton
+            android:id="@+id/EditOrderBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_edit"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/item_right_txt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.30"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.10" />
+
+        <ImageButton
+            android:id="@+id/DeleteOrderBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ViewOrderBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_view"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

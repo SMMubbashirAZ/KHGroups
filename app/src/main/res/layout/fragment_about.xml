@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AboutFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!--
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="About POS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            />
+    -->
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="ABOUT SOFTWARE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#cfd3d4" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e5e9e8"
+                android:padding="10dp"
+                android:text="ABOUT SOFTWARE" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#cfd3d4" />
+
+            <TextView
+                android:id="@+id/aboutpos1Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/about_pos1"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#cfd3d4" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e5e9e8"
+                android:padding="10dp"
+                android:text="ABOUT COMPANY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#cfd3d4" />
+
+            <TextView
+                android:id="@+id/aboutpos2Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Company Text"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@drawable/location_icon" />
+
+            <TextView
+                android:id="@+id/locationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-50dp"
+                android:text="TextView" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@drawable/phone_icon" />
+
+            <TextView
+                android:id="@+id/PhoneTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-50dp"
+                android:text="TextView" />
+
+            <ImageView
+                android:id="@+id/skypelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+
+                android:src="@drawable/skype_icon" />
+
+            <TextView
+                android:id="@+id/SkypeContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-45dp"
+                android:padding="10dp"
+                android:text="blazeminds"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+
+                />
+
+
+            <ImageView
+                android:id="@+id/fblogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@drawable/facebook_icon" />
+
+            <TextView
+                android:id="@+id/FbContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-45dp"
+                android:text="https://www.facebook.com/vr.blazeminds"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+
+                />
+
+
+            <ImageView
+                android:id="@+id/twitterlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:src="@drawable/twitter_icon" />
+
+
+            <TextView
+                android:id="@+id/TwitterContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-45dp"
+                android:text="https://twitter.com/Blazeminds"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

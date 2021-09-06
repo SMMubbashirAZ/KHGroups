@@ -1,0 +1,132 @@
+SELECT SUM(total2),
+       total2
+  FROM sales_order
+ WHERE strftime('%Y', "datetime_orig") = strftime('%Y', date('now') ) AND 
+       strftime('%m', "datetime_orig") = strftime('%m', date('now') ) AND 
+       strftime('%d', "datetime_orig") = strftime('%d', date('now') );
+
+SELECT total
+  FROM sales_order
+ WHERE id = (
+                SELECT MAX(id) 
+                  FROM sales_order
+            );
+
+SELECT SUM(total2) 
+  FROM sales_order
+ WHERE strftime('%Y', "datetime_orig") = strftime('%Y', date('now') ) AND 
+       strftime('%m', "datetime_orig") = strftime('%m', date('now') ) AND 
+       strftime('%d', "datetime_orig") = strftime('%d', date('now') );
+
+DELETE FROM sales_order
+      WHERE id = 6520;
+
+VACUUM;
+
+
+ALTER TABLE cust_pricing ADD tax_filer_11 REAL DEFAULT 0;
+
+ALTER TABLE cust_pricing ADD tax_filer_21 REAL DEFAULT 0;
+
+ALTER TABLE cust_pricing ADD tax_filer_31 REAL DEFAULT 0;
+
+SELECT Count(sv_id) 
+  FROM shop_visit
+ WHERE strftime('%Y', sv_datetime) = strftime('%Y', date('now') ) AND 
+       strftime('%m', sv_datetime) = strftime('%m', date('now') ) AND 
+       strftime('%d', sv_datetime) = strftime('%d', date('now') );
+
+SELECT filer_non_filer
+  FROM customer
+ WHERE id = 36349;
+
+SELECT c.fname AS fn,
+       c.lname AS ln,
+       c.cust_type_id AS type,
+       c.id AS cust_id,
+       so.id AS oid,
+       so.item_confirm AS conf,
+       so.datetime_orig AS dt,
+       so.total2 AS amt,
+       so.amount_recieved AS amt_rec,
+       so.execute_complete AS exe_comp,
+       c.customer_search AS data_search
+  FROM sales_order so,
+       customer c
+ WHERE c.id = so.customer_id AND 
+       so.item_delete = 0
+ ORDER BY datetime_orig DESC;
+
+SELECT *
+  FROM order_details
+ WHERE order_id = 39026 AND 
+       product_id = 26;
+
+SELECT od.product_id AS productId,
+       od.quantity AS qty,
+       od.quantity_exe AS qtyExe,
+       od.scheme_qty AS schemeQty,
+       od.discount_one AS discount1,
+       od.discount_two AS discount2,
+       od.trade_offer AS tradeOffer,
+       od.order_id AS oid,
+       so.id AS oid,
+       so.total2 AS tot2,
+       so.total_execute AS tot_exe,
+       c.fname AS fn,
+       c.lname AS ln,
+       c.id AS cust_id
+  FROM order_details od,
+       sales_order so,
+       customer c
+ WHERE c.id = so.customer_id AND 
+       so.id = od.order_id AND 
+       od.order_id = 39867;
+
+SELECT c.id AS cust_id,
+       c.fname AS fn,
+       c.lname AS ln,
+       c.cust_type_id AS type,
+       sr.id AS rid,
+       sr.item_confirm AS conf,
+       sr.datetime AS dt,
+       sr.total2 AS amt,
+       sr.execute_complete AS sr_exe_comp,
+       c.customer_search AS data_search
+  FROM sales_return sr,
+       customer c
+ WHERE c.id = sr.customer_id AND 
+       sr.item_delete = 0
+ ORDER BY datetime DESC;
+
+SELECT name
+  FROM shop_category
+ WHERE id = (
+                SELECT shop_cat_id
+                  FROM customer
+                 WHERE id = 44898
+            );
+
+SELECT name
+  FROM inventory
+ WHERE id = 5169;
+
+SELECT product_id,
+       quantity
+  FROM order_details
+ WHERE order_id = 7558;
+
+SELECT id,
+       datetime_orig
+  FROM sales_order
+ WHERE employee_id = 47773
+ ORDER BY id DESC;
+
+SELECT SUM(quantity) 
+  FROM order_details
+ WHERE 7756;
+
+
+
+SELECT * FROM cust_pricing WHERE (type_id = 1 OR customer_id = 0) AND (product_id = 39 OR brand_id = 10 OR product_type_id = 10);
+

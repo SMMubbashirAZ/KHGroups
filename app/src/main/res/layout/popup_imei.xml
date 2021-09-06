@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/SetttingsLayout"
+            android:visibility="gone">
+    -->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        android:text="IMEI Information"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="23sp"
+
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:layout_margin="10dp"
+        android:background="#c0c0c0" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/ImeiTxt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:text="IMEI"
+            android:textSize="20sp" />
+
+
+    </TableRow>
+
+
+    <Button
+        android:id="@+id/CloseIMEIBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_gradient"
+        android:padding="15dp"
+        android:text="CLOSE"
+        android:textColor="#415259"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+</LinearLayout>
+

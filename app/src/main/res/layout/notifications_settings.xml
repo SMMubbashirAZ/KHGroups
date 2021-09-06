@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="NOTIFICATIONS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TableRow
+                android:id="@+id/AlertTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Alert"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/AlertCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/AlertCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/VibTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Vibration"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/VibCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/VibCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SoundTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Sound"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/SoundCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/SoundCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/LightTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Lights"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/LightCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/LightCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/EmailTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Email"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/EmailCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/EmailCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/PhoneTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Phone Start"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/PhoneCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/PhoneCheck"
+                        android:layout_margin="5dp"
+                        android:background="#cfd3d4" />
+
+
+                </RelativeLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/ProcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/SaveSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="SAVE SETTINGS" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

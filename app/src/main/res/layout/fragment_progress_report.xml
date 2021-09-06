@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ProgressReportFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!--
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="About POS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            />
+    -->
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Progress Report"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="72dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/LoadSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/round_btn"
+            android:padding="10dp"
+            android:text="Load Sheet"
+            android:textSize="24sp"
+           />
+
+        <Button
+            android:id="@+id/OrderSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/round_btn"
+            android:padding="10dp"
+            android:text="Order Sheet"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/DeliverySheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/round_btn"
+            android:padding="10dp"
+            android:text="Delivery List"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/DsrReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/round_btn"
+            android:padding="10dp"
+            android:text="Dsr Report"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

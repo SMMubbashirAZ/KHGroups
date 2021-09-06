@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="ID : "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TextView
+                        android:id="@+id/Qty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Quantity: "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <EditText
+                        android:id="@+id/SelectedQtyTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/PriceTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginTop="-30dp"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="textPersonName">
+
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/UpdateBtnDialog"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/chkin_button_gradient"
+                        android:text="UPDATE"
+                        android:textColor="#FFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/DelBtnDialog"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/chkin_button_gradient"
+                        android:text="DELETE"
+                        android:textColor="#FFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </TableRow>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!--        <Button
+                    android:id="@+id/SelectQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Select" />-->
+    </TableLayout>
+
+
+</LinearLayout>

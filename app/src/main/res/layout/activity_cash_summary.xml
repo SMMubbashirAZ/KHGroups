@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".activities.CashSummaryActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        app:contentInsetStartWithNavigation="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:navigationIcon="@drawable/back_btn"
+        app:title="Cash Memo Details"
+        app:titleTextAppearance="?android:attr/textAppearanceMedium"
+        app:titleTextColor="@color/white" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/rv_main_summary"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        app:layout_constraintBottom_toTopOf="@+id/ll_cash_summary_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_cash_summary_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/locStatusTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:text="Location Status:"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tv_cash_summary_no_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:text="Order Summary"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Customer Name: "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_cash_summary_cust_name"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#00B0F0"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:id="@+id/ll_cash_summary_unit"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Order Amount:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_cash_summary_total_cost"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#00B0F0"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Delivery Date:"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_cash_summary_delivery_date"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#00B0F0"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/NotesTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:digits="@string/allow_characters"
+                android:hint="Add Remarks Here"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:maxLength="150"
+                android:textSize="16sp"
+                android:minLines="3"
+                android:scrollHorizontally="false"
+
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_cash_summary_cart"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_blue_back"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                android:tint="@color/white"
+                android:src="@drawable/ic_frwd_icon"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

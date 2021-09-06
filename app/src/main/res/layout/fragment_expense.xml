@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AboutFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/expenseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/expenseLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hello"
+                android:textSize="15sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/SelectShop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Shop Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLines="20"
+                    android:padding="15dp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:weightSum="1">
+
+
+                <Spinner
+                    android:id="@+id/commitmentDrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Search Area"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:weightSum="1">
+
+
+                <Spinner
+                    android:id="@+id/expenseTypeDrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Search Area"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:id="@+id/amountEdtTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:digits="@string/digits_only"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:padding="15dp" />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <EditText
+                    android:id="@+id/NotesTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:drawable/edit_text"
+                    android:digits="@string/allow_characters"
+                    android:hint="Remarks"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
+                    android:maxLines="5"
+                    android:minLines="4"
+                    android:padding="15dp"
+                    android:scrollHorizontally="false"
+
+
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/locStatusTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittxt_bg"
+                    android:gravity="center"
+                    android:text="Location Status:"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/SubmitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="SUBMIT"
+
+                    />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ShowExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/NoItemTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Sorry No Items Available"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/Hlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa"
+            android:scrollbars="none" />
+
+
+        <ListView
+            android:id="@+id/listviewRList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/CommitmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/CommitmentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/SelectCustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Customer Name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLines="20"
+                    android:padding="15dp" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/fromDateTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:padding="15dp"
+                    android:text="From Date"
+                    android:textSize="16sp"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/toDateTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:padding="15dp"
+                    android:text="To Date"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/saleAmountEdtTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:digits="@string/digits_only"
+                    android:hint="Sale Amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/giftAmountEdtTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:digits="@string/digits_only"
+                    android:hint="Gift Amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:id="@+id/remarksEdtTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/edit_text"
+                    android:digits="@string/allow_characters"
+                    android:hint="Remarks"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
+                    android:maxLines="5"
+                    android:minLines="4"
+                    android:padding="15dp"
+                    android:scrollHorizontally="false"
+
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/SubmitBtnCommitment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="15dp"
+                    android:text="SUBMIT" />
+
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ShowCommitment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/noItemTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Sorry No Items Available"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/headerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa"
+            android:scrollbars="none" />
+
+
+        <ListView
+            android:id="@+id/subList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

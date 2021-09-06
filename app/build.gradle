@@ -1,0 +1,432 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+
+    compileSdkVersion 29
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.blazeminds.order.mf2"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 42
+        versionName '5.1'
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+
+        meskay_and_femtee_2 {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.meskayandfemtee'
+            targetSdkVersion 29
+            versionCode 79
+            versionName '7.9'
+            resValue "string", "app_name", "M&F"
+            buildConfigField("String", "BASE_URL", "\"https://meskayandfemtee.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+        karachi_lubricant {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.klubricant'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "Karachi Lubricant"
+            buildConfigField("String", "BASE_URL", "\"https://blazeminds.com/kl/order3\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        alghousiaindustries {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.alghousiaindustries'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "Alghousia Industries"
+            buildConfigField("String", "BASE_URL", "\"https://alghousiaindustries.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+        SiyahImpex {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.siyahimpexsnd'
+            targetSdkVersion 29
+            versionCode 3
+            versionName '1.3'
+            resValue "string", "app_name", "Siyah Impex"
+            buildConfigField("String", "BASE_URL", "\"https://syahimpex.info/order/order5/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        stancos {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.stancos'
+            targetSdkVersion 29
+            versionCode 80
+            versionName '8.0'
+            resValue "string", "app_name", "Stancos"
+            buildConfigField("String", "BASE_URL", "\"http://stancospk.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        english {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.english'
+            targetSdkVersion 29
+            versionCode 60
+            versionName '6.0'
+            resValue "string", "app_name", "English"
+            buildConfigField("String", "BASE_URL", "\"https://sarwana.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        quice_food {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.quice'
+            targetSdkVersion 29
+            versionCode 37
+            versionName '3.7'
+            resValue "string", "app_name", "Quice Food"
+            buildConfigField("String", "BASE_URL", "\"http://quice.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        saeed_ghani {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.saeedghani'
+            targetSdkVersion 29
+            versionCode 86
+            versionName '8.6'
+            resValue "string", "app_name", "Saeed Ghani"
+            buildConfigField("String", "BASE_URL", "\"https://saeedghani.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        khalil_group {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.khalilgroup'
+            targetSdkVersion 29
+            versionCode 5
+            versionName '1.4'
+            resValue "string", "app_name", "Khalil Group"
+            buildConfigField("String", "BASE_URL", "\"http://khalilgroupsnd.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        bms_snd_demo {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.bmssnddemo'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "BMS SNDD DEMO"
+            buildConfigField("String", "BASE_URL", "\"https://blazeminds.com/demo2/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        bms_demo {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.demo'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "BMS Demo"
+            buildConfigField("String", "BASE_URL", "\"https://blazeminds.com/demo2/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        snowhite {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.snowhite'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "Snowhite"
+            buildConfigField("String", "BASE_URL", "\"http://snowwhitedetergent.com/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+
+        lorenzo_industries {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.lorenzoindustries'
+            targetSdkVersion 29
+            versionCode 8
+            versionName '1.8'
+            resValue "string", "app_name", "Lorenzo Industries"
+            buildConfigField("String", "BASE_URL", "\"http://lorenzoIndustries.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        lorenzo_snd {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.lorenzo_snd'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "Lorenzo Industries"
+            buildConfigField("String", "BASE_URL", "\"http://lorenzoIndustries.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        golden_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.goldenfoods'
+            targetSdkVersion 29
+            versionCode 30
+            versionName '3.0'
+            resValue "string", "app_name", "Golden Foods"
+            buildConfigField("String", "BASE_URL", "\"http://goldenfoodindustries.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        brands_unlimited {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.brands_unlimited'
+            targetSdkVersion 29
+            versionCode 67
+            versionName '6.6'
+            resValue "string", "app_name", "Brands Unlimited"
+            buildConfigField("String", "BASE_URL", "\"http://brandsunlimited.info/order/order5\"")
+            manifestPlaceholders = [
+                    appIcon: "@drawable/brandslogo"
+            ]
+            dimension "default"
+        }
+
+        millac_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.millac_foods'
+            targetSdkVersion 29
+            versionCode 29
+            versionName '2.8'
+            resValue "string", "app_name", "Millac Foods"
+            buildConfigField("String", "BASE_URL", "\"https://millacfoods.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        lq_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.lq_foods'
+            targetSdkVersion 29
+            versionCode 16
+            versionName '1.6'
+            resValue "string", "app_name", "LQ Foods"
+            buildConfigField("String", "BASE_URL", "\"https://lqfoods.info/lq/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        bikiya {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.bikiya'
+            targetSdkVersion 29
+            versionCode 12
+            versionName '1.2'
+            resValue "string", "app_name", "Bikiya"
+            buildConfigField("String", "BASE_URL", "\"https://bikiyaindustries.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        sanfaz_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.sanfazfoods'
+            targetSdkVersion 29
+            versionCode 14
+            versionName '1.4'
+            resValue "string", "app_name", "Sanfaz Foods"
+            buildConfigField("String", "BASE_URL", "\"http://sanfazfoods.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+        snacks_and_co {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.snacksandco'
+            targetSdkVersion 29
+            versionCode 10
+            versionName '1.0'
+            resValue "string", "app_name", "Snacks & Co"
+            buildConfigField("String", "BASE_URL", "\"http://snacksandco.info/order/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+
+
+        bms {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.bms'
+            targetSdkVersion 29
+            versionCode 1
+            versionName '1.0'
+            resValue "string", "app_name", "BMS"
+            buildConfigField("String", "BASE_URL", "\"https://blazeminds.com/system/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+
+        }
+
+        //Discontinued
+
+        meskay_and_femtee {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.mf2'
+            targetSdkVersion 27
+            versionCode 73
+            versionName '7.3'
+            resValue "string", "app_name", "M&F"
+            buildConfigField("String", "BASE_URL", "\"http://meskayandfemtee.info/order/order3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        sana_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.sanafoods'
+            targetSdkVersion 27
+            versionCode 20
+            versionName '3.0'
+            resValue "string", "app_name", "Sana Foods"
+            buildConfigField("String", "BASE_URL", "\"http://sanafoods.info/order/android/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+        dashi_foods {
+            minSdkVersion 19
+            applicationId 'com.blazeminds.order.dashifoods'
+            targetSdkVersion 27
+            versionCode 35
+            versionName '45'
+            resValue "string", "app_name", "Dashi Foods"
+            buildConfigField("String", "BASE_URL", "\"http://dashifoods.info/order/android3/\"")
+            dimension "default"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_launcher"
+            ]
+        }
+
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'cat.ereza:customactivityoncrash:1.5.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.0.3'
+    implementation 'com.wdullaer:materialdatetimepicker:3.6.0'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.0'
+
+    implementation 'com.wang.avi:library:1.0.5'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+
+    implementation 'com.fxn769:cue:1.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
+        transitive = true
+    }
+    implementation 'com.wdullaer:swipeactionadapter:2.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+}

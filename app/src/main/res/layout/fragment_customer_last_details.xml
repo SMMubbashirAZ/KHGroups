@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AboutFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!--
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="About POS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            />
+    -->
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/LabelCustDetailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="CUSTOMER HISTORY"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/CustDetailsMainLL"
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="14dp"
+                android:weightSum="1.0">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Shop Name:"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/ShopNametxtview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:weightSum="1.0">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Contact:"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/ContactTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:weightSum="1.0">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Person:"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/PersonTxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"></TextView>
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+                android:background="@color/light_grey"
+                android:padding="9dp"
+                android:text="Last 5 Visits:"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="9dp"
+                android:padding="2dp"
+                android:weightSum="1">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="DATE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="REASON"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="AMOUNT"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <!-- Umais added below txtView-->
+
+            </TableRow>
+
+            <ListView
+                android:id="@+id/last5Visits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginEnd="9dp"></ListView>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+                android:background="@color/light_grey"
+                android:padding="9dp"
+                android:text="Last 5 Orders:"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="9dp"
+                android:padding="2dp"
+                android:weightSum="1">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="ORDER #"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="DATE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="AMOUNT"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Umais added below txtView-->
+
+            </TableRow>
+
+            <ListView
+                android:id="@+id/last5Orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginEnd="9dp"></ListView>
+
+            <TextView
+                android:id="@+id/LastOrderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="14dp"
+                android:background="@color/light_grey"
+                android:padding="9dp"
+                android:text="Last Order:"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="9dp"
+                android:padding="2dp"
+                android:weightSum="1">
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="ITEM"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="RATE"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="QTY"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Umais added below txtView-->
+
+            </TableRow>
+
+            <ListView
+                android:id="@+id/lastOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginEnd="9dp"></ListView>
+
+            <Button
+                android:id="@+id/CloseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:background="@drawable/chkin_button_gradient"
+                android:padding="14dp"
+                android:text="Close"
+                android:textColor="@color/mdtp_white">
+
+            </Button>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

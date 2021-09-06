@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:weightSum="1">
+
+
+        <EditText
+            android:id="@+id/TaskTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Task" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/ConfirmTaskBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:gravity="center"
+            android:text="CONFIRM"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/CancelTaskBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:gravity="center"
+            android:text="CANCEL"
+            android:textColor="#FFF" />
+
+    </TableRow>
+
+</LinearLayout>

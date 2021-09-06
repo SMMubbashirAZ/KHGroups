@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+-->
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="6">
+
+        <TextView
+            android:id="@+id/ItemHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Item Name"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/QtyHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Old Qty"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/NewQtyHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="New Qty"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ItemDiscountHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Disc1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ItemDiscountHeader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Disc2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ItemDetailHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Details"
+            android:textSize="12sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/EditLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:id="@+id/ItemID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ItemTotal2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:weightSum="6"
+
+            >
+
+
+            <TextView
+                android:id="@+id/ItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="MEDI PASTE-M  "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/OldQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="99999"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/QtyTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:digits="1234567890."
+                android:hint="Qty"
+                android:imeOptions="actionDone"
+                android:inputType="number|numberDecimal"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:text="9999"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/discountTxt"
+                app:layout_constraintStart_toEndOf="@+id/OldQty"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/QtyTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            &lt;!&ndash;<Spinner
+                android:id="@+id/discountDrop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:background="@drawable/edittxt_bg"
+                android:visibility="gone"
+                />&ndash;&gt;
+            <EditText
+                android:id="@+id/discountTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:digits="1234567890"
+                android:hint="D1"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:text="0"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/discount2Txt"
+                app:layout_constraintStart_toEndOf="@+id/QtyTxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/discount2Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:gravity="center"
+                android:digits="1234567890"
+                android:hint="D2"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:text="0"
+                android:layout_marginStart="5dp"
+                android:textSize="14sp"
+                android:visibility="visible"
+                  />
+
+            <TextView
+                android:id="@+id/discountTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="0"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/discountTxtView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="0"
+
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tradeOfferTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/itemDetailsTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@mipmap/details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/discount2Txt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+        &lt;!&ndash;<TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/ItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="name" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.02" />
+
+            <TextView
+                android:id="@+id/OldQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:text="Old Qty" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.02" />
+
+            <EditText
+                android:id="@+id/QtyTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:background="@android:drawable/edit_text"
+                android:digits="1234567890."
+                android:hint="Qty"
+                android:imeOptions="actionDone"
+                android:inputType="number|numberDecimal"
+                android:maxLength="5"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/QtyTxtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.02" />
+
+            &lt;!&ndash;<Spinner
+                android:id="@+id/discountDrop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:background="@drawable/edittxt_bg"
+                android:visibility="gone"
+                />&ndash;&gt;
+            <EditText
+                android:id="@+id/discountTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:background="@android:drawable/edit_text"
+                android:digits="1234567890"
+                android:hint="Dis"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/discountTxtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/tradeOfferEdtTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:background="@android:drawable/edit_text"
+                android:digits="1234567890"
+                android:hint="T.O"
+                android:imeOptions="actionDone"
+                android:visibility="gone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1" />
+
+
+            <TextView
+                android:id="@+id/tradeOfferTxtView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.02" />
+            <TextView
+                android:id="@+id/itemDetailsTxtView"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.15"
+                android:background="@drawable/details" />
+
+
+        </TableRow>&ndash;&gt;
+
+        <Button
+            android:id="@+id/DeleteOrder"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Delete"
+            android:visibility="gone" />
+
+        &lt;!&ndash;
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/list_divider"
+                android:layout_margin="10dp"/>
+        &ndash;&gt;
+
+
+    </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>-->

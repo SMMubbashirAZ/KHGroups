@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/RadiusSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <TableRow
+        android:id="@+id/tableRowButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="2">
+
+
+        <Button
+            android:id="@+id/ConfirmRADBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="CONFIRM"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+
+            />
+
+        <Button
+            android:id="@+id/CancelRADBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="CANCEL"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+    </TableRow>
+
+
+</LinearLayout>

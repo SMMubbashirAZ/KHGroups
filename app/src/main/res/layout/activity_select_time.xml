@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="-30sp"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/SelectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toLeftOf="@+id/CancelTime"
+            android:layout_weight="5"
+            android:text="Select" />
+
+
+        <Button
+            android:id="@+id/CancelTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/SelectTime"
+            android:layout_alignRight="@+id/TimeSelected"
+            android:layout_alignBottom="@+id/SelectTime"
+            android:layout_weight="5"
+            android:text="Cancel" />
+
+
+    </TableRow>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:padding="20sp">
+        <!--
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+            <DatePicker
+                android:id="@+id/DateSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false" />
+
+                </TableRow>
+        -->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TimePicker
+                android:id="@+id/TimeSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/DateSelected"
+                android:layout_marginTop="5dp" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

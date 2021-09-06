@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableRow
+        android:id="@+id/tableRowButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="1">
+
+
+        <Button
+            android:id="@+id/UpdateRADBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="UPDATE RADIUS"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRowButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/UpdateLOCBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="UPDATE LOCATION"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+    </TableRow>
+
+
+</LinearLayout>

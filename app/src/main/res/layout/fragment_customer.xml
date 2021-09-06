@@ -1,0 +1,1074 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!-- SHOW CUSTOMER -->
+
+    <LinearLayout
+        android:id="@+id/ShowCustomers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/NoItemTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Sorry No Shops Available"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/Hlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa"
+            android:scrollbars="none" />
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+
+
+    <!-- Customers End -->
+
+
+    <!-- Add Customer STARTS  -->
+
+
+    <RelativeLayout
+        android:id="@+id/ShowAddCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+            <!--
+
+                        <TextView
+                            android:id="@+id/locStatusTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Location Status:"
+                            android:layout_margin="5dp"
+                            android:textSize="16sp"
+                            android:visibility="gone"/>
+            -->
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Owner Name" />
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/FName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Owner Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/LName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Last Name"
+                            android:inputType="textPersonName"
+                            android:padding="15dp">
+
+                        </EditText>
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+
+                        android:text="Shop Name" />
+
+                    <TableRow
+                        android:id="@+id/tableRowComp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/CompName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Shop Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Mobile No." />
+
+                    <TableRow
+                        android:id="@+id/tableRow8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/CellNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:digits="@string/digits_only"
+                            android:hint="Mobile No."
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Phone No." />
+
+                    <TableRow
+                        android:id="@+id/tableRow9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/P1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="@string/digits_only"
+                            android:hint="Phone"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Alternate Phone No." />
+
+                    <TableRow
+                        android:id="@+id/tableRow10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/P2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="@string/digits_only"
+                            android:hint="Alternate Phone"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="CNIC" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/cnic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="@string/digits_only"
+                            android:hint="CNIC "
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="13"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Opening Balance" />
+
+                    <TableRow
+                        android:id="@+id/tableRowOpeningBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/openingBalance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:digits="@string/digits_only"
+                            android:hint="Opening Balance"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Address" />
+
+                    <TableRow
+                        android:id="@+id/tableRow11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Add"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="@string/allow_characters"
+                            android:hint="Address"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPostalAddress"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Route" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <Spinner
+                            android:id="@+id/SelectTownAutoComplete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Search Area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Customer Type" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <Spinner
+                            android:id="@+id/cutomerTypeDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Search Area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/ShopCategoryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Shop Category" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <Spinner
+                            android:id="@+id/cutomerShopCatDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Search Area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                 <TextView
+                     android:id="@+id/SubShopCategoryLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Sub Shop Category" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <Spinner
+                            android:id="@+id/cutomerShopSubCatDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Tax Type" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <Spinner
+                            android:id="@+id/cutomerTaxTypeDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_warn"
+                            android:hint="Search Area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Select Payment Mode"
+                        android:textSize="16sp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-10dp"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+                        <Spinner
+                            android:id="@+id/customerCategoryDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Search Area"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/City"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="City"
+                            android:inputType="text"
+                            android:padding="15dp">
+
+                        </EditText>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/State"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="State"
+                            android:inputType="text"
+                            android:padding="15dp">
+
+                        </EditText>
+
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Country"
+                            android:inputType="text"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Email" />
+
+                    <TableRow
+                        android:id="@+id/tableRow13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:text="Remarks" />
+
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Notes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:digits="@string/allow_characters"
+                            android:hint="Remarks"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="150"
+                            android:padding="15dp" />
+
+
+                    </TableRow>
+
+
+                    <!--<TableRow
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1"
+
+                        >
+
+
+                        <EditText
+                            android:id="@+id/CityEdt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="City"
+                            android:inputType="text"
+                            android:padding="15dp"
+                            android:background="@drawable/edittext_warn"
+                            android:layout_weight="1"/>
+
+
+                    </TableRow>
+
+                    <TableRow
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:weightSum="1"
+
+                        >
+
+
+                        <EditText
+                            android:id="@+id/AreaEdt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Area"
+                            android:background="@drawable/edittext_warn"
+                            android:maxLines="5"
+                            android:minLines="2"
+                            android:padding="15dp"
+                            android:layout_weight="1"
+                            android:inputType="text"/>
+
+
+                    </TableRow>
+-->
+                    <TextView
+                        android:id="@+id/locStatusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:text="Fetching Coordinates:"
+                        android:textSize="16sp" />
+
+                    <!--
+
+                                        <TableRow
+                                            android:id="@+id/tableRowGetLocationBtn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_gravity="center_horizontal"
+                                            android:padding="15dp"
+                                            >
+
+                                            <Button
+                                                android:id="@+id/getLocationBtn"
+                                                android:layout_width="200dp"
+                                                android:layout_height="50dp"
+                                                android:layout_gravity="center"
+                                                android:text="Get Location"
+                                                android:width="150dp"
+                                                android:layout_margin="5dp"
+                                                />
+
+                                        </TableRow>
+                    -->
+
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <Button
+                            android:id="@+id/AddCustomerBtn"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:padding="15dp"
+                            android:text="ADD SHOP" />
+
+                    </TableRow>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+    <!-- Add Customer UPDATE GPS STARTS UMAIS  -->
+    <ScrollView
+        android:id="@+id/scrollViewUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ShowUpdateLocationCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/SelectCustomerForUpdateLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Customer Name"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="20" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/SelectCategoryForUpdateLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Category Name"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="20" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <AutoCompleteTextView
+                android:id="@+id/SelectSubCategoryForUpdateLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Sub Category Name"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="20" />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/AddressEdTxtUpdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:drawable/edit_text"
+                android:hint="Address"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:gravity="top|left"
+                android:textSize="14dp"
+
+           />
+
+
+        </TableRow>
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1"
+
+            >
+
+
+            <EditText
+                android:id="@+id/CityEdtForUpdateLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_warn"
+                android:hint="City"
+                android:inputType="text"
+                android:padding="15dp" />
+
+
+        </TableRow>
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1"
+
+            >
+
+
+            <EditText
+                android:id="@+id/AreaEdtForUpdateLoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_warn"
+                android:hint="Area"
+                android:inputType="text"
+                android:maxLines="5"
+                android:minLines="2"
+                android:padding="15dp" />
+
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/locStatusTextViewForUpdateLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Fetching Coordinates:"
+            android:textSize="16sp" />
+
+
+
+        <TableRow
+            android:id="@+id/tableRowGetLocationBtnForUpdateLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/getLocationBtnForUpdateLoc"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:width="150dp"
+                android:text="Get Location" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/UpdateLocBtn"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:width="150dp"
+                android:text="Update" />
+
+        </TableRow>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/addRouteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1"
+
+            >
+
+
+            <EditText
+                android:id="@+id/addRoute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_warn"
+                android:digits="@string/allow_characters"
+                android:hint="Add Route"
+                android:inputType="text"
+                android:padding="15dp" />
+
+
+        </TableRow>
+        <TableRow
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:weightSum="1"
+
+            >
+        <Spinner
+            android:padding="15dp"
+            android:id="@+id/select_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/SubmitBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/chkin_button_gradient"
+                android:text="SUBMIT"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ShowVerifiedShops"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/NoItemTxtVerifiedShops"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Sorry No Shops Available"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/HlistVerifiedShops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f6fa"
+            android:scrollbars="none" />
+
+
+        <ListView
+            android:id="@+id/listviewVerifiedShops"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+
+    </LinearLayout>
+
+    <!-- Add Customer UPDATE GPS ENDS HERE UMAIS  -->
+    <!-- Add Customer GPS STARTS  -->
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ShowGPSCustomer"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+            <ListView
+                android:id="@+id/HlistGPS"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#f5f6fa"
+                >
+            </ListView>
+
+
+            <ListView
+                android:id="@+id/listviewGPS"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+            </ListView>
+
+
+
+
+
+        </TableLayout>
+
+    </RelativeLayout>-->
+
+
+    <!-- ADD CUSTOMER ENDS -->
+
+
+</RelativeLayout>

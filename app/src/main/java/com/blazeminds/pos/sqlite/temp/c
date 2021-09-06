@@ -1,0 +1,22 @@
+--
+-- File generated with SQLiteStudio v3.1.1 on Mon Jul 29 13:24:30 2019
+--
+-- Text encoding used: System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- Table: cust_pricing
+CREATE TABLE cust_pricing (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, type_id INTEGER, product_id INTEGER, trade_price REAL, discount_1 REAL, discount_2 REAL, trade_offer REAL, scheme REAL, scheme_val REAL, scheme_product INTEGER DEFAULT 0, tax_1 REAL, tax_filer_1 REAL, tax_2 REAL, tax_filer_2 REAL, tax_3 REAL, tax_filer_3 REAL, sub_total REAL , customer_id INTEGER DEFAULT 0, brand_id INTEGER DEFAULT 0, product_type_id INTEGER DEFAULT 0, product_sub_type_id INTEGER DEFAULT 0, min_qty INTEGER DEFAULT NULL, max_qty INTEGER DEFAULT NULL, multi INTEGER DEFAULT 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (202, 9, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 44898, 1, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (456, 0, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 44898, 0, 0, 0, NULL, NULL, 1);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (710, 11, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (964, 12, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (1212, 13, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (1460, 14, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (1708, 15, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+INSERT INTO cust_pricing (id, type_id, product_id, trade_price, discount_1, discount_2, trade_offer, scheme, scheme_val, scheme_product, tax_1, tax_filer_1, tax_2, tax_filer_2, tax_3, tax_filer_3, sub_total, customer_id, brand_id, product_type_id, product_sub_type_id, min_qty, max_qty, multi) VALUES (1956, 16, 689, 800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 'NULL', 'NULL', 0);
+
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;

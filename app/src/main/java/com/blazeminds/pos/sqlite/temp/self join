@@ -1,0 +1,10 @@
+SELECT e.id AS ID,
+       e.e_name AS Employee,
+       s.s_id AS Supervisor_ID,
+       s.e_name AS Supervisor
+  FROM self_join e,
+       self_join s
+ WHERE s.id = e.s_id
+ ORDER BY CASE e.id WHEN 1 THEN 3 WHEN 2 THEN 4 WHEN 3 THEN 1 WHEN 4 THEN 2 END,
+          CASE s.s_id WHEN 1 THEN 2 WHEN 2 THEN 3 WHEN 3 THEN 4 WHEN 4 THEN 5 WHEN 5 THEN 6 WHEN 6 THEN 1 END;
+ 

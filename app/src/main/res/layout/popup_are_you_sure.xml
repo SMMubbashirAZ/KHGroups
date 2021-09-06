@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        android:text="Are You Sure?"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="23sp"
+
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:layout_margin="10dp"
+        android:background="#c0c0c0" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Are You Sure?"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/YesBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="YES"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/NoBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="NO"
+            android:textColor="#FFF"
+
+            android:textSize="15sp" />
+
+    </TableRow>
+
+</LinearLayout>

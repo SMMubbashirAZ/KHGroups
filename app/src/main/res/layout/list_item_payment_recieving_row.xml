@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/orderIdTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:text="Order ID"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:id="@+id/amountTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:text="Amount"
+            android:textStyle="bold" />
+
+        <!--
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="0.05"
+                    />
+
+                <TextView
+                    android:id="@+id/TotalAmountTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="Old Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+        -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <EditText
+            android:id="@+id/recievingEdtTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:inputType="number"
+            android:text=""
+            android:textStyle="bold" />
+
+    </TableRow>
+
+</LinearLayout>

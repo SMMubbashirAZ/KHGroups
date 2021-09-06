@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<string name="app_name">M&amp;F</string>-->
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tab">\u0009</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello BMS!</string>
+    <string name="slide_1_desc">The easiest way to take order from shopkeeper!</string>
+
+    <string name="slide_2_title">BMS BOOKING</string>
+    <string name="slide_2_desc">Book order from your favorite Shop!</string>
+
+    <string name="slide_3_title">BMS Sample 1</string>
+    <string name="slide_3_desc">Sample 1</string>
+
+    <string name="slide_4_title">BMS Sample 2</string>
+    <string name="slide_4_desc">Sample 2!</string>
+
+
+    <string-array name="drawer_titles">
+        0
+        <item name="dash">Dashboard</item>
+
+        1
+        <item>Route Plan</item>
+
+        2
+        <item>Sales Order</item>
+
+        <!-- 3
+        <item>Order List</item>-->
+        <!-- 3
+        <item>Execution List</item>-->
+        3
+        <item>Sales Return</item>
+
+        <!-- 5
+        <item>Sales Return List</item>-->
+
+        4
+        <item>Payment Collection</item>
+
+        5
+        <item>Shop List</item>
+
+        6
+        <item name="inv">Product List</item>
+
+        7
+        <item>Merchandizing</item>
+        <!--11
+        <item>Attendance</item>-->
+
+        8
+        <item>Expense</item>
+
+        9
+        <item>Travel Expense </item>
+
+        10
+        <item>Shop Visit</item>
+
+        11
+        <item>Shop Stock</item>
+
+        12
+        <item>Product Catalog </item>
+
+        13
+        <item>Reports</item>
+
+        14
+        <item>Phone Status</item>
+
+        15
+        <item>About Software</item>
+
+        16
+        <item>Offline Tracking</item>
+
+        17
+        <item>Attendance</item>
+
+        18
+        <item>Support</item>
+
+        19
+        <item>Route Plan Map</item>
+        20
+        <item>Progress Report</item>
+        21
+        <item>Auto Item Sales Order</item>
+        22
+        <item>Sales Order List</item>
+        23
+        <item>Sales Return List</item>
+    </string-array>
+
+    <string-array name="settings_button_names">
+        0
+        <item name="AC">Access Control</item>
+        1
+        <item name="notif">Notifications</item>
+        2
+        <item name="SyncSettings">Auto Sync Settings</item>
+        3
+        <item name="security">Security</item>
+        4
+        <item name="reporting">Reporting</item>
+
+    </string-array>
+
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+
+
+    <integer-array name="nav_drawer_icons">
+        0
+        <item>@drawable/dashboard</item>
+        1
+        <item>@drawable/route</item>
+        2
+        <item>@drawable/report</item>
+        3
+        <item>@drawable/item_list</item>
+        4
+        <item>@drawable/customer_list</item>
+        <!--        5<item>@drawable/place_order</item>-->
+        <!--<item>@drawable/new_item</item>-->
+        <!--<item>@drawable/new_customer</item>-->
+        5
+        <item>@drawable/summary</item>
+        6
+        <item>@drawable/sync</item>
+        <!--        8<item>@drawable/settings</item>-->
+        7
+        <item>@drawable/about_us</item>
+
+        8
+        <item>@drawable/summary</item>
+
+        9
+        <item>@drawable/summary</item>
+
+        10
+        <item>@drawable/dashboard_new</item>
+
+        11
+        <item>@drawable/sale_order</item>
+
+        12
+        <item>@drawable/list</item>
+
+        13
+        <item>@drawable/exec_list</item>
+
+        14
+        <item>@drawable/sale_return</item>
+
+        15
+        <item>@drawable/sale_return_list</item>
+        16
+        <item>@drawable/payment_collection</item>
+
+        17
+        <item>@drawable/shop_list</item>
+
+        18
+        <item>@drawable/product_list</item>
+
+        19
+        <item>@drawable/reports</item>
+
+        20
+        <item>@drawable/phone_status</item>
+
+        21
+        <item>@drawable/about_pos</item>
+
+        22
+        <item>@drawable/offline_tracking</item>
+
+        23
+        <item>@drawable/merchandizing</item>
+
+        24
+        <item>@drawable/attendance</item>
+
+        25
+        <item>@drawable/expense</item>
+
+        26
+        <item>@drawable/shop_visit</item>
+
+        27
+        <item>@drawable/support_icon</item>
+
+        28
+        <item>@drawable/shop_stock</item>
+
+        29
+        <item>@drawable/route_plan</item>
+        30
+        <item>@drawable/progressreportwhite</item>
+    </integer-array>
+
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_item_one">ItemOne</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+
+
+    <!-- Payment Mode Values -->
+    <string name="payment_spinner_title">Select Mode of Payment</string>
+    <string name="cash">Cash</string>
+    <string name="cheque">Cheque</string>
+
+
+    <!-- Sync Duration Values -->
+    <string name="sync_spinner_title">Select Synchronization Duration</string>
+    <string name="t5">5 Minutes</string>
+    <string name="t15">15 Minutes</string>
+    <string name="t30">30 Minutes</string>
+    <string name="t1">1 Hour</string>
+    <string name="t3">3 Hours</string>
+
+
+    <!-- About POS Text Starts -->
+
+    <string name="about_pos1"> Blaze Minds Point of Sale is a system that replaces a retailer\'s cash register, tracks its inventory,
+	     sales, and customer information, and provides reports for managing its business and serving its customers. <br />
+
+	     </string>
+    <string name="autosynclabel">Auto Location Tracking Is Off</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <string-array name="QtyEntries">
+        0
+        <item>Select Quantity</item>
+        1
+        <item>1</item>
+        2
+        <item>2</item>
+        3
+        <item>3</item>
+        4
+        <item>4</item>
+        5
+        <item>5</item>
+        6
+        <item>6</item>
+        7
+        <item>7</item>
+        8
+        <item>8</item>
+        9
+        <item>9</item>
+        10
+        <item>10</item>
+        20
+        <item>20</item>
+        30
+        <item>30</item>
+        40
+        <item>40</item>
+        50
+        <item>50</item>
+        60
+        <item>60</item>
+
+    </string-array>
+
+
+    <string-array name="PriorityEntries">
+        0
+        <item>Priority</item>
+        1
+        <item>Low</item>
+        2
+        <item>Medium</item>
+        3
+        <item>High</item>
+
+    </string-array>
+
+    <string-array name="ReportToEntries">
+        0
+        <item>Report To</item>
+        1
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="RelatedToEntries">
+        0
+        <item>Related To</item>
+        1
+        <item>3</item>
+
+    </string-array>
+
+    <string-array name="SubjectEntries">
+        0
+        <item>Subject</item>
+        1
+        <item>Sales</item>
+        2
+        <item>Support</item>
+        3
+        <item>Customer</item>
+        4
+        <item>Inquiry</item>
+        5
+        <item>Stock</item>
+        6
+        <item>Miscellaneous</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="api_key">AIzaSyDKF12T5ZUkCqm015usDan4Hbe2JTKVdVg</string>
+
+    <string name="digits_only">0,1,2,3,4,5,6,7,8,9</string>
+    <string name="allow_characters">0,1,2,3,4,5,6,7,8,9, ,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,-,:,#,.,@,?,=,+,(,),%,$,*,&amp;</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+</resources>

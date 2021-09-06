@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_filter_recylar_main_layout_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+
+            android:id="@+id/search_filter_recylar_main_hd_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Code"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+</LinearLayout>

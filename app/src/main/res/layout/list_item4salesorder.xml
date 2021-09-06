@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/OrderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/DBOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Customer " />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.20" />
+
+        <Button
+            android:id="@+id/ConfirmBtn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.20"
+            android:text="Confirm" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.20" />
+
+        <Button
+            android:id="@+id/EditBtn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.20"
+            android:text="Edit" />
+
+    </TableRow>
+
+
+</LinearLayout>

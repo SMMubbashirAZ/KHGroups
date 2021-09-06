@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DialogLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:id="@+id/TopRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/CustomerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.3"
+            android:text="name"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="date"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.30"
+            android:text="New Total"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <!-- <TableRow
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:weightSum="1"
+         android:layout_above="@+id/Divider"
+         android:padding="10dp">
+
+         <TextView
+             android:id="@+id/totalAmountTV"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:text="Tot Amount"
+             android:layout_margin="5dp"
+             android:textStyle="bold"/>
+
+
+     </TableRow>-->
+
+    <View
+        android:id="@+id/Divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/TopRow"
+        android:layout_margin="5dp"
+        android:background="@color/list_divider" />
+
+
+    <ListView
+        android:id="@+id/ItemListH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Divider"
+        android:layout_margin="5dp"
+        android:scrollbars="none" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ItemListH"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/ItemList"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="60dp"
+                android:divider="@color/list_divider"
+                android:dividerHeight="2dp"
+
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TableRow
+        android:id="@+id/discountRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/notesRow"
+        android:padding="5dp"
+
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Discount"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/discountTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="0"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/notesRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ButtonLayout"
+        android:padding="5dp"
+
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Remarks"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/notesTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="Remarks Text"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/ButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:padding="5dp"
+        android:weightSum="1">
+
+
+        <!--<include
+            layout="@layout/include_edit_order_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="visible"/>-->
+        <Button
+            android:id="@+id/Execute"
+            style="@style/App_ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.3"
+            android:text="Execute" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:id="@+id/UpdateOrder"
+            style="@style/App_ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.3"
+            android:text="Update" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:id="@+id/Dismiss"
+            style="@style/App_ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.3"
+            android:text="Close" />
+
+
+    </TableRow>
+
+
+    <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true">
+
+            <include
+                layout="@layout/include_edit_order_button"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+
+        </RelativeLayout>
+    -->
+
+
+</RelativeLayout>

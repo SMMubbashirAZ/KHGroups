@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="2dp"
+    android:padding="5dp">
+
+
+    <!--
+        <TextView
+            android:id="@+id/Code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Code"
+            android:layout_margin="5dp"
+            android:layout_weight="0.6">
+        </TextView>
+    -->
+
+
+    <!--
+        <TextView
+            android:id="@+id/PicTxt"
+            android:layout_width="0dp"
+            android:text="Pic"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5">
+        </TextView>
+    -->
+
+
+    <TextView
+        android:id="@+id/DBInventNameValues"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1.2"
+        android:text="First"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DBQtyValues"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1.1"
+        android:text="Second"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DBPriceValues"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1.1"
+        android:text="Third"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DBBrandNameValues"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0.8"
+        android:text="Fourth"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

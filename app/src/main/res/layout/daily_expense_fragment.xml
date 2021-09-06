@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AboutFrag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/DateLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:weightSum="1.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Date:"
+
+                    android:textSize="14sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/DateSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@color/light_grey"
+                    android:padding="14dp"
+                    android:text="Date Selected"
+                    android:textSize="18sp"></TextView>
+            </LinearLayout>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="14dp"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="EXPENSE TYPE"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/second"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:text="AMOUNT"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <!-- Umais added below txtView-->
+
+            </TableRow>
+            <ListView
+                android:id="@+id/DailyExpenseinputList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="14dp"
+
+                android:focusable="false" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="14dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="SUBMIT"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

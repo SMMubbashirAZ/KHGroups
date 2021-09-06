@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/SetttingsLayout"
+            android:visibility="gone">
+    -->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        android:text="Settings"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="23sp"
+
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dip"
+        android:layout_margin="10dp"
+        android:background="#c0c0c0" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/SettingPass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPassword" />
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/SettingLogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="SETTINGS LOGIN"
+            android:textColor="#FFF"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/ForgetPassSettings"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/chkin_button_gradient"
+            android:text="FORGET PASSWORD"
+            android:textColor="#FFF"
+
+            android:textSize="12sp" />
+
+    </TableRow>
+
+    <!--
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/ForgetPassLayout"
+            android:visibility="gone">
+    -->
+
+    <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Recover Settings Password"
+                android:id="@+id/textViewRec"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+
+                android:gravity="center"
+                android:textSize="23sp"
+                android:layout_gravity="center"
+
+                />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_margin="10dp"
+                android:layout_height="5dip"
+                android:background="#c0c0c0" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:hint="Enter Email Address"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/AdminEmailTxt"
+                    android:layout_weight="1"/>
+
+
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recover Password"
+                    android:id="@+id/RecoverPassSettings"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"/>
+
+            </TableRow>
+
+    -->
+
+
+</LinearLayout>
+
+    <!--
+        </LinearLayout>-->

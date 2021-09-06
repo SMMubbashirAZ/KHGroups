@@ -1,0 +1,6 @@
+ 
+
+
+
+
+SELECT * FROM cust_pricing WHERE ((type_id = 10 OR type_id = 0)  AND (customer_id = 44898 OR customer_id = 0) ) AND (product_id = 0 AND (brand_id = null OR brand_id = 0 )  AND (product_type_id = null OR product_type_id = 0))  AND ( (min_qty <= 0 OR (min_qty IS NULL) OR (min_qty = 'NULL')) AND ( max_qty >= 0 OR max_qty IS NULL  OR (min_qty = 'NULL')))   AND (multi = 1 OR multi = 0) ORDER BY type_id DESC, customer_id DESC, product_id DESC, brand_id DESC, product_type_id DESC;

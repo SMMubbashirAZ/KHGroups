@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="DATETIME"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.27"
+            android:text="SHOP NAME"
+            android:textColor="@color/black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+
+        <TextView
+            android:id="@+id/third"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.22"
+            android:text="SALE AMT"
+            android:textColor="@color/black" />
+        <!--
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="0.05"
+                    />
+
+                <TextView
+                    android:id="@+id/TotalAmountTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10"
+                    android:text="Old Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+        -->
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="0.02" />
+
+        <TextView
+            android:id="@+id/fourth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="GIFT AMT"
+            android:textColor="@color/black" />
+
+    </TableRow>
+</LinearLayout>

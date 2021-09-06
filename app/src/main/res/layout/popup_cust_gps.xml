@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_margin="10dp"
+            android:background="#00000000" />
+
+
+        <TableRow
+            android:id="@+id/tableRowOLDGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewOLDGPS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.4"
+                android:text="Last Location:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <TextView
+                android:id="@+id/GetOLDGPS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+
+                />
+
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+
+        <TableRow
+            android:id="@+id/tableRowGPS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewGPS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.4"
+                android:text="Current Location:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <TextView
+                android:id="@+id/GetGPS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+
+                />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:id="@+id/tableRowRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textViewRadius"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.3"
+                android:text="Radius:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <!--
+                        <TextView
+                            android:id="@+id/GetGPS"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+
+                            />
+            -->
+
+            <Spinner
+                android:id="@+id/SelectRadius"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0.4"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:text="meter"
+
+                />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TableRow
+            android:id="@+id/tableRowButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/ConfirmGPSBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/chkin_button_gradient"
+                android:text="CONFIRM"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+
+                />
+
+            <Button
+                android:id="@+id/RetryGPSBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/chkin_button_gradient"
+                android:text="RETRY"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

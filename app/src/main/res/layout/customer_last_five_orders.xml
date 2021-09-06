@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ExportLocalLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/orderTV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:freezesText="true"
+                android:gravity="center"
+                android:text="ORDER #"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:freezesText="true"
+                android:gravity="center"
+                android:text="DATE"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/amountTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:freezesText="true"
+                android:gravity="center"
+                android:text="AMOUNT"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <!-- Umais added below txtView-->
+
+        </TableRow>
+
+    </LinearLayout>
+</LinearLayout>

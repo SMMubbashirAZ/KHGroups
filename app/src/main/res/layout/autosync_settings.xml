@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#33b5e5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="AUTO SYNC SETTINGS"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFF"
+            android:textSize="15sp" />
+    </TableRow>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TableRow
+                android:id="@+id/AutoSyncTbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="Auto Sync Enable"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <CheckBox
+                        android:id="@+id/AutoSyncCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="" />
+
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/VibCheck"
+                android:layout_margin="5dp"
+                android:background="#cfd3d4" />
+
+
+            <TableRow
+                android:id="@+id/CIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AutoSyncTbl"
+                android:padding="10dp"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textViewT1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Check In Time"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/CheckInTimeTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="Tap To Select Time" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/VibCheck"
+                android:layout_margin="5dp"
+                android:background="#cfd3d4" />
+
+            <TableRow
+                android:id="@+id/COut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CIn"
+                android:padding="10dp"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textViewT2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Check Out Time"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/CheckOutTimeTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="Tap To Select Time" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/VibCheck"
+                android:layout_margin="5dp"
+                android:background="#cfd3d4" />
+
+            <TableRow
+                android:id="@+id/Spin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/COut"
+                android:padding="10dp"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textViewDur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Sync Duration"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Spinner
+                    android:id="@+id/DurationTimeTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="Tap To Select Time"
+                    android:spinnerMode="dropdown" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/VibCheck"
+                android:layout_margin="5dp"
+                android:background="#cfd3d4" />
+
+            <TableRow
+                android:id="@+id/ProcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SyncTbl"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <Button
+                    android:id="@+id/SaveSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:text="SAVE SETTINGS" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

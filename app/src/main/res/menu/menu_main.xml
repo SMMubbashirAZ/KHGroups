@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/menu_sync"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title=""
+        tools:ignore="AppCompatResource" />
+
+    <!--
+        <item
+            android:id="@+id/menu_upload"
+            android:icon="@drawable/new_item"
+            android:orderInCategory="1"
+            android:showAsAction="always"
+            android:title=""
+            tools:ignore="AppCompatResource"/>
+    -->
+
+    <item
+        android:id="@+id/menu_overflow"
+        android:icon="@drawable/ic_drawer"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title=""
+        tools:ignore="AppCompatResource">
+
+        <menu>
+
+            <item
+                android:id="@+id/Menu_Profile"
+                android:orderInCategory="1"
+                android:title="Profile"
+                app:showAsAction="never" />
+
+            <!--<item android:id="@+id/Menu_Support"
+                android:title="Support"
+            android:orderInCategory="2"
+             />-->
+
+
+            <item
+                android:id="@+id/Menu_Logout"
+                android:orderInCategory="2"
+                android:title="Logout" />
+
+
+        </menu>
+    </item>
+</menu>

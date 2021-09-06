@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+
+    android:layout_margin="5dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+    <ListView
+        android:id="@+id/scheme_list"
+
+        android:dividerHeight="0dp"
+        android:background="@drawable/bg_selected"
+        android:layout_weight="2.5"
+
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_weight="0.5"
+        android:weightSum="2"
+        android:theme="@style/AppTheme"
+        android:layout_marginTop="5dp"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <View
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/back_scheme"
+            android:text="Back"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_weight="1"
+            android:text="Next"
+            android:id="@+id/next_scheme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.cardview.widget.CardView>

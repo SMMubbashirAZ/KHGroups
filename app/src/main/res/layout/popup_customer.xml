@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Name "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:background="@android:drawable/edit_text"
+                            android:minLines="2"
+                            android:textColor="@android:color/black"
+
+                            />
+
+                    </TableRow>
+
+
+                    <TextView
+                        android:id="@+id/Co"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Shop Name "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="0.10" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Comp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="textMultiLine"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/Eml"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Email "
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="0.10" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="textEmailAddress"
+                            android:minLines="2"
+                            android:textColor="@android:color/black"
+
+                            />
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/CellTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cell"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Cell"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/PhoneTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Phone"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/phone1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/phone2txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Alt. Phone"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/phone2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/cnicTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CNIC"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+                        <EditText
+                            android:id="@+id/cnic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/routeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Route"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/routeDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/customerShopCategoryTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Shop Category"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/customerShopCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+
+                    </TableRow>
+
+            <!--        <TextView
+                        android:id="@+id/customerSubShopCategoryTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Sub Shop Category"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/customerSubShopCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+
+                    </TableRow>-->
+
+                    <TextView
+                        android:id="@+id/customerTypeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Customer Type"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/customerTypeDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+
+                    </TableRow>
+                    <TextView
+                        android:id="@+id/customerTaxTypeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Tax Type"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+
+                        <EditText
+                            android:id="@+id/customerTaxTypeDrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+                        <!--<Spinner
+                            android:id="@+id/customerTypeDrop"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Search Area"
+                            android:layout_weight="0.45"
+                            android:maxLines="1"
+                            android:imeOptions="actionNext"/>-->
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/NameTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Address"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/Add"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+
+                        <TextView
+                            android:id="@+id/obalTxt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:text="Opening Balance"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.10" />
+
+                        <EditText
+                            android:id="@+id/obalTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.45"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="number"
+                            android:minLines="2"
+                            android:textColor="@android:color/black" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:id="@+id/notesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notes"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="1">
+
+
+                        <EditText
+                            android:id="@+id/notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/edit_text"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textColor="@android:color/black" />
+                    </TableRow>
+
+                </LinearLayout>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <!--<Button
+                        android:id="@+id/Update"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.45"
+                        android:text="Update"
+                        style="@style/App_ButtonStyle"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="0.10"/>
+                    <Button
+                        android:id="@+id/CloseDialog"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.45"
+                        android:text="Dismiss"
+                        style="@style/App_ButtonStyle"/>-->
+
+                    <Button
+                        android:id="@+id/CloseDialog"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/chkin_button_gradient"
+                        android:text="OK"
+                        android:textColor="#FFF"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!--        <Button
+                    android:id="@+id/SelectQty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Select" />-->
+    </TableLayout>
+
+
+</LinearLayout>
